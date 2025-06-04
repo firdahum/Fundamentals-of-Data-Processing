@@ -1,0 +1,13 @@
+# Menjalankan program utama
+python main.py
+
+# Menjalankan unit test pada masing-masing file di folder test
+python -m pytest tests/test_extract.py -v --cov --cov-report=html
+python -m pytest tests/test_transform.py -v --cov --cov-report=html
+python -m pytest tests/test_load.py -v --cov --cov-report=html
+
+# Menjalankan pengujian cakupan kode (coverage) untuk semua file di folder test
+coverage run -m pytest tests
+
+# Menampilkan ringkasan laporan cakupan kode di terminal
+coverage report
